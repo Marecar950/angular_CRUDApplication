@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { WebApiService } from './web-api.service';
 
-var apiUrl = "http://127.0.0.1:8000";
+var apiUrl = "https://marecar.pythonanywhere.com";
 
 var httpLink = {
   getAllClients: apiUrl + "/api/clients",
