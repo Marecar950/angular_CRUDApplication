@@ -1,0 +1,72 @@
+<div class="container mt-5">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4><b>Mettre à jour le client</b></h4>
+                    </div>
+                </div>
+            </div>
+            <form #clientForm="ngForm">
+                <div class="table-content mt-3">
+
+                    <div class="form-group row mb-3">
+                        <div class="col-sm-3">
+                            <label for="lastname">Nom<span class="text-danger"> *</span></label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="lastname" name="lastname" [(ngModel)]="editClientForm.lastname">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <div class="col-sm-3">
+                            <label for="firstname">Prénom<span class="text-danger"> *</span></label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="firstname" name="firstname" [(ngModel)]="editClientForm.firstname">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <div class="col-sm-3">
+                            <label for="dateOfBirth">Date de naissance<span class="text-danger"> *</span></label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" [(ngModel)]="editClientForm.dateOfBirth">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <div class="col-sm-3">
+                            <label for="email">Email<span class="text-danger"> *</span></label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="editClientForm.email">
+                        </div>
+                    </div>
+
+                    <div class="form-group row mb-3">
+                        <div class="col-sm-3">
+                            <label for="phone">Téléphone<span class="text-danger"> *</span></label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="editClientForm.phone">
+                        </div>
+                    </div>
+                </div>
+                <div class="table-footer mb-3">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <a href="" class="btn btn-lg btn-secondary">Retour</a>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-lg btn-primary" (click)="EditClient(clientForm.form.valid)">Modifier</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

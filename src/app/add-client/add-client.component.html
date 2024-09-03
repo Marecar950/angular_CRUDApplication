@@ -1,0 +1,76 @@
+<div class="container mt-5 pt-4">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row mb-3">
+                    <div *ngIf="error" class="alert alert-danger text-center">
+                        {{ error }}
+                    </div>
+                    <div class="col-sm-6">
+                        <h4><b>Nouveau client</b></h4>
+                    </div>
+                </div>
+            </div>
+            <form #clientForm="ngForm">
+                <div class="table-content">
+
+                    <div class="form-group p-10 row mb-3">
+                        <div class="col-sm-3">
+                            <label for="lastname">Nom<span class="text-danger"> *</span></label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="lastname" name="lastname" [(ngModel)]="addClientForm.lastname" #lastname="ngModel" required> 
+                        </div>
+                    </div>
+
+                    <div class="form-group p-10 row mb-3">
+                        <div class="col-sm-3">
+                            <label for="firstname" class="">Prénom<span class="text-danger"> *</span></label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="firstname" name="lastname" [(ngModel)]="addClientForm.firstname" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group p-10 row mb-3">
+                        <div class="col-sm-3">
+                            <label for="dateOfBirth">Date de naissance<span class="text-danger"> *</span></label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth"  [(ngModel)]="addClientForm.dateOfBirth" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group p-10 row mb-3">
+                        <div class="col-sm-3">
+                            <label for="email">Email<span class="text-danger"> *</span></label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="email" name="email" [(ngModel)]="addClientForm.email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group p-10 row mb-3">
+                        <div class="col-sm-3">
+                            <label for="phone">Téléphone<span class="text-danger"> *</span></label>
+                        </div>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="addClientForm.phone" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-footer mb-3 ">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <a href="#" class="btn btn-lg btn-secondary"><i class='fas fa-arrow-circle-left'></i> Retour</a>
+                        </div>
+                        <div class="col-sm-6">
+                            <button class="btn btn-lg btn-primary" (click)="AddClient(clientForm.form.valid)">Ajouter</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
